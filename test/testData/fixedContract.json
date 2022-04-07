@@ -1,0 +1,12 @@
+{
+    "contract": {
+        "name": "Simple test",
+        "scope": "Good job",
+        "rate": "1234",
+        "currency": "GBP",
+        "perDate": "Weekly",
+        "clause": "Test",
+        "country": "United States",
+        "state": "Colorado"
+    }
+}
