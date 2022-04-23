@@ -2,7 +2,7 @@
     "contract": {
         "name": "Simple test",
         "scope": "Good job",
-        "rate": "1234",
+        "rate": "1000",
         "currency": "GBP",
         "perDate": "Weekly",
         "clause": "Test",
