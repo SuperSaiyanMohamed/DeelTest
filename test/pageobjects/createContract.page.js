@@ -5,7 +5,7 @@ class CreateContractPage extends Page {
     get fixedContractBox () { return $("div.box") }
     get contractName () { return $("input[name='name']") }
     get contractScope () { return $("textarea[name='scope']") }
-    get selectEffectiveDates () { return $("div[class='deel-ui__calendar-input-container__input']") }
+    get selectEffectiveDates () { return $(`input[name='effectiveDate']`) }
     get contractorTaxResidence () { return $$(`div[class='input-container']`) }
     get useContractorsProfile () { return $(`div[class='deel-ui__select__option-container']`) }
     get submitBtn () { return $("button[type='submit']") }
@@ -23,8 +23,8 @@ class CreateContractPage extends Page {
     async setEffectiveDate () {
         const date = new Date();
         const yesterday = new Date(date.setDate(date.getDate() - 1));
-        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        await (await $(`abbr[aria-label='${monthNames[yesterday.getMonth()]} ${yesterday.getDate()}, ${yesterday.getFullYear()}']`)).click();
+        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        await (await $(`button[aria-label='${monthNames[yesterday.getMonth()]} ${yesterday.getDate()}, ${yesterday.getFullYear()}']`)).click();
     }
 
     async generalInfo (name, scope){
